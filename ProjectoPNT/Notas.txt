@@ -1,0 +1,8 @@
+Usuario colgarle un atributo que sea collection
+https://www.entityframeworktutorial.net/code-first/configure-many-to-many-relationship-in-code-first.aspx
+many to one a desarrollar posteriormente.
+https://blog.jetbrains.com/dotnet/2022/01/31/entity-framework-core-inside-rider-ui-way/
+
+ con ? despues del tipo de dato, se puede hacer que el atributo sea nullable
+ 
+ 
