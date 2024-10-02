@@ -1,16 +1,19 @@
-using ProjectoPNT.Entity;
+using ProyectoPNT.Context;
+using ProyectoPNT.Entity;
 
-namespace ProjectoPNT.service;
+namespace ProyectoPNT.Service.implementation;
 
 public class UserService
 {
-    List<Usuario> usuarios = new List<Usuario>();
+   // List<Usuario> usuarios = new List<Usuario>();
+   private AppDbContext context = new AppDbContext();
     public bool save(Usuario usuario)
     {
         bool estado = false;
         if (usuario!=null)
         {
-            usuarios.Add(usuario);
+            context.Usuarios.Add(usuario);
+            context.SaveChanges();
             estado = true;
         }   
         return estado;
@@ -21,7 +24,8 @@ public class UserService
         bool estado = false;
         if (usuario!=null)
         {
-            usuarios.Remove(usuario);
+            context.Usuarios.Remove(usuario);
+            context.SaveChanges();
             estado = true;
         }   
         return estado;

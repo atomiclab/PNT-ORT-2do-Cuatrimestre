@@ -1,7 +1,7 @@
-using ProjectoPNT.Entity;
-using ProjectoPNT.service;
+using ProyectoPNT.Entity;
+using ProyectoPNT.Service.implementation;
 
-namespace ProjectoPNT.Controller;
+namespace ProyectoPNT.Controller;
 
 public class UserController
 {

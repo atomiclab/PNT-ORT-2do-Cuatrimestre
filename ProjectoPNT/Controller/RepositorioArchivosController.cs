@@ -1,6 +1,6 @@
-using ProjectoPNT.Entity;
+using ProyectoPNT.Entity;
 
-namespace ProjectoPNT.Controller;
+namespace ProyectoPNT.Controller;
 
 public class RepositorioArchivosController
 {

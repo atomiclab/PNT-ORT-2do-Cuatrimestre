@@ -8,7 +8,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/ProjectoPNT/ProjectoPNT/ProjectoPNT.csproj",
-        "projectName": "ProjectoPNT",
+        "projectName": "ProyectoPNT",
         "projectPath": "/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/ProjectoPNT/ProjectoPNT/ProjectoPNT.csproj",
         "packagesPath": "/Users/ginotubaro/.nuget/packages/",
         "outputPath": "/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/ProjectoPNT/ProjectoPNT/obj/",
@@ -37,6 +37,18 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

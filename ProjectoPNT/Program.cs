@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using ProjectoPNT.Controller;
-using ProjectoPNT.Entity;
+using ProyectoPNT.Controller;
+using ProyectoPNT.Entity;
 
 UserController userController = new UserController();
 

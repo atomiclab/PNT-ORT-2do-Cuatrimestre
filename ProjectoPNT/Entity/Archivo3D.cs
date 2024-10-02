@@ -1,4 +1,4 @@
-namespace ProjectoPNT.Entity;
+namespace ProyectoPNT.Entity;
 
 public class Archivo3D
 {

@@ -1,6 +1,4 @@
-using ProjectoPNT.Entity;
-
-namespace ProjectoPNT.Controller;
+namespace ProyectoPNT.Controller;
 
 public class Archivo3DController
 {
