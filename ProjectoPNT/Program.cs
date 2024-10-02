@@ -7,7 +7,7 @@ UserController userController = new UserController();
 
 Usuario nuevoUsuario = new Usuario
 {
-    Id = 1,
+
     Nombre = "Juan",
     Apellido = "Perez",
     Email = "juan.perez@gmail.com",

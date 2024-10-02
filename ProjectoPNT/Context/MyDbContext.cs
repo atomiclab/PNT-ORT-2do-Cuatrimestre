@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using ProyectoPNT.Entity;
 
 
 namespace ProyectoPNT.Context;
 
 public partial class MyDbContext : DbContext
 {
+    public DbSet<Usuario> Usuarios { get; set; }
+    
     public MyDbContext()
     {
     }
@@ -18,7 +21,7 @@ public partial class MyDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server = localhost; Database = ProyectoPNTDB; User Id= SA; Password= reallyStrongPwd123; Data Source = localhost; Initial Catalog = ProyectoPNT; Integrated Security = True; TrustServerCertificate=true;");
+        => optionsBuilder.UseSqlServer("Server=localhost;Database=ProyectoPNTDB;User Id= SA; Password=reallyStrongPwd123;TrustServerCertificate=true;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -11,7 +11,7 @@ public class AppDbContext : DbContext
     {
        //      optionsBuilder.UseSqlServer("Server=localhost;Database=test;User Id=sa;Password=YourPassword!;TrustServerCertificate=true;");
        optionsBuilder.UseSqlServer(
-           "Server = localhost; Database = ProyectoPNTDB; User Id= SA; Password= reallyStrongPwd123; Data Source = localhost; Initial Catalog = ProyectoPNT; Integrated Security = True; TrustServerCertificate=true;");
+           "Server=localhost;Database=ProyectoPNTDB;User Id= SA; Password=reallyStrongPwd123;TrustServerCertificate=true;");
 
        base.OnConfiguring(optionsBuilder);
        
