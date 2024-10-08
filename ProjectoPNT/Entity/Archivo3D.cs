@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProyectoPNT.Entity;
 
@@ -15,5 +16,7 @@ public class Archivo3D
     public String Ruta { get; set; }
     //public DateTime FechaCreacion { get; set; }
     //public Usuario Autor { get; set;  }
+    [ForeignKey("UsuarioId")]
     public int UsuarioId { get; set; }
+    
 }

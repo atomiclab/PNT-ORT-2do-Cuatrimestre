@@ -20,4 +20,7 @@ public class Usuario
     [DataType(DataType.EmailAddress)] // para emails 
     public String Email { get; set; }
     public String Password { get; set; }
+    
+    // One-to-Many
+    public ICollection<Archivo3D> Archivos3D { get; set; }
 }
