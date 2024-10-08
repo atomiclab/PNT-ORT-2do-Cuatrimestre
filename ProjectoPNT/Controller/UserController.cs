@@ -1,5 +1,5 @@
+using ProjectoPNT.Service.implementation;
 using ProyectoPNT.Entity;
-using ProyectoPNT.Service.implementation;
 
 namespace ProyectoPNT.Controller;
 

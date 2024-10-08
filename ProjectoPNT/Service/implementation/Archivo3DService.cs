@@ -3,28 +3,28 @@ using ProyectoPNT.Entity;
 
 namespace ProjectoPNT.Service.implementation;
 
-public class UserService
+public class Archivo3DService
 {
-   // List<Usuario> usuarios = new List<Usuario>();
-   private AppDbContext context = new AppDbContext();
-    public bool save(Usuario usuario)
+    private AppDbContext context = new AppDbContext();
+    
+    public bool save(Archivo3D archivo3D)
     {
         bool estado = false;
-        if (usuario!=null)
+        if (archivo3D!=null)
         {
-            context.Usuarios.Add(usuario);
+            context.Archivos3D.Add(archivo3D);
             context.SaveChanges();
             estado = true;
         }   
         return estado;
     }
     
-    public bool update(Usuario usuario)
+    public bool update(Archivo3D archivo3d)
     {
         bool estado = false;
-        if (usuario!=null)
+        if (archivo3d!=null)
         {
-            context.Usuarios.Update(usuario);
+            context.Archivos3D.Update(archivo3d);
             context.SaveChanges();
             estado = true;
         }   
@@ -33,10 +33,10 @@ public class UserService
     public bool deleteById(int id) // borrado por id
     {
         bool estado = false;
-        Usuario usuario = context.Usuarios.FirstOrDefault(x => x.Id == id);
-        if (usuario!=null)
+        Archivo3D archivo3D = context.Archivos3D.FirstOrDefault(x => x.Id == id);
+        if (archivo3D!=null)
         {
-            context.Usuarios.Remove(usuario);
+            context.Archivos3D.Remove(archivo3D);
             context.SaveChanges();
             estado = true;
         }   
@@ -45,16 +45,15 @@ public class UserService
         
         
     
-    public bool delete(Usuario usuario)
+    public bool delete(Archivo3D archivo3D)
     {
         bool estado = false;
-        if (usuario!=null)
+        if (archivo3D!=null)
         {
-            context.Usuarios.Remove(usuario);
+            context.Archivos3D.Remove(archivo3D);
             context.SaveChanges();
             estado = true;
         }   
         return estado;
     }
-    
 }

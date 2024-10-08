@@ -6,7 +6,7 @@ namespace ProyectoPNT.Context;
 public class AppDbContext : DbContext
 {
     public DbSet<Usuario> Usuarios { get; set; }
-    
+    public DbSet<Archivo3D> Archivos3D { get; set; }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
        //      optionsBuilder.UseSqlServer("Server=localhost;Database=test;User Id=sa;Password=YourPassword!;TrustServerCertificate=true;");

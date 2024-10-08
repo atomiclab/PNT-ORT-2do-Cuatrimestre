@@ -5,7 +5,7 @@ namespace ProyectoPNT.Entity;
 public class Archivo3D
 {  
     [Key]
-    public int id { get; set; }
+    public int Id { get; set; }
     [MaxLength(50)]
     public String Nombre { get; set;} 
     [MaxLength(150)]
@@ -14,5 +14,6 @@ public class Archivo3D
     public Double Tamano { get; set; }
     public String Ruta { get; set; }
     //public DateTime FechaCreacion { get; set; }
-    public Usuario Autor { get; set;  }
+    //public Usuario Autor { get; set;  }
+    public int UsuarioId { get; set; }
 }

@@ -4,6 +4,7 @@ using ProyectoPNT.Controller;
 using ProyectoPNT.Entity;
 
 UserController userController = new UserController();
+Archivo3DController archivo3DController = new Archivo3DController();
 
 Usuario nuevoUsuario = new Usuario
 {
@@ -42,3 +43,27 @@ Console.WriteLine("Usuario registrado: " + nuevoUsuario.Nombre);
 Console.WriteLine("Usuario registrado: " + nuevoUsuario2.Nombre);
 Console.WriteLine("Usuario registrado: " + nuevoUsuario3.Nombre);
 Console.WriteLine("Se borro el usuario con el ID: " + id);
+
+
+Archivo3D archivo3D = new Archivo3D
+{
+    Nombre = "TornilloTorx",
+    Descripcion = "Tornillo de cabeza torx de 3mm",
+    Ruta = "Piezas_De_Ingenieria/Tornillos",
+    Formato = ".STL",
+    UsuarioId = nuevoUsuario3.Id,
+};
+Archivo3D archivo3D2 = new Archivo3D
+{
+    Nombre = "TornilloHexagonal",
+    Descripcion = "Tornillo de cabeza hexagonal de 3mm",
+    Ruta = "Piezas_De_Ingenieria/Tornillos",
+    Formato = ".STL",
+    UsuarioId = nuevoUsuario3.Id,
+};
+
+bool resultado5 = archivo3DController.Save(archivo3D);
+bool resultado6 = archivo3DController.Save(archivo3D2);
+
+Console.WriteLine("Archivo 3D registrado?"+ resultado5 +" " + archivo3D.Nombre);
+Console.WriteLine("Archivo 3D registrado?"+ resultado6 + " "+archivo3D2.Nombre);
