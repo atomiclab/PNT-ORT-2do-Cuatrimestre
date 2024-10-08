@@ -2,10 +2,10 @@
 
 #nullable disable
 
-namespace ProyectoPNT.Migrations
+namespace ProjectoPNT.Migrations
 {
     /// <inheritdoc />
-    public partial class AgregandoUsuarios : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

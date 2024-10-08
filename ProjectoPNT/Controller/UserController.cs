@@ -11,6 +11,18 @@ public class UserController
     {
         return userService.save(usuario);
     }
+    public bool Delete(Usuario usuario)
+    {
+        return userService.delete(usuario);
+    }
+    public bool DeleteById(int id)
+    {
+        return userService.deleteById(id);
+    }
+    public bool Update(Usuario usuario)
+    {
+        return userService.update(usuario);
+    }
 
     public bool IniciarSesion(String email, String password)
     {

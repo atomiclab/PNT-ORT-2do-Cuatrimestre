@@ -8,11 +8,11 @@ using ProyectoPNT.Context;
 
 #nullable disable
 
-namespace ProyectoPNT.Migrations
+namespace ProjectoPNT.Migrations
 {
-    [DbContext(typeof(MyDbContext))]
-    [Migration("20241002012955_AgregandoUsuarios")]
-    partial class AgregandoUsuarios
+    [DbContext(typeof(AppDbContext))]
+    [Migration("20241008134458_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

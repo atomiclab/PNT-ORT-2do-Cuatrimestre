@@ -4110,11 +4110,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/ProjectoPNT/ProyectoPNT/ProyectoPNT.csproj",
-      "projectName": "ProyectoPNT",
-      "projectPath": "/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/ProjectoPNT/ProyectoPNT/ProyectoPNT.csproj",
+      "projectUniqueName": "/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/ProjectoPNT/ProjectoPNT.csproj",
+      "projectName": "ProjectoPNT",
+      "projectPath": "/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/ProjectoPNT/ProjectoPNT.csproj",
       "packagesPath": "/Users/ginotubaro/.nuget/packages/",
-      "outputPath": "/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/ProjectoPNT/ProyectoPNT/obj/",
+      "outputPath": "/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/ProjectoPNT/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ginotubaro/.nuget/NuGet/NuGet.Config"

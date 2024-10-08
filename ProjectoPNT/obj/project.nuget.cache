@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8CNnx1Rw4k4JtXwPyowLkHZoQmsNZTylRKhRHsu6q/uUnTPxpeq3OOhoskkOsfg3dsDO1WTpRCvLCpXK3dSFrw==",
+  "dgSpecHash": "CU13bpBPmQSovXzZDeuTZBmRs3PHyGDkEGpuqy7tlochDcor8zJ98e8ykunrX9jFJIYy0JbWoc/V36zrvgv1hA==",
   "success": true,
-  "projectFilePath": "/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/ProjectoPNT/ProyectoPNT/ProyectoPNT.csproj",
+  "projectFilePath": "/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/ProjectoPNT/ProjectoPNT.csproj",
   "expectedPackageFiles": [
     "/Users/ginotubaro/.nuget/packages/azure.core/1.35.0/azure.core.1.35.0.nupkg.sha512",
     "/Users/ginotubaro/.nuget/packages/azure.identity/1.10.3/azure.identity.1.10.3.nupkg.sha512",

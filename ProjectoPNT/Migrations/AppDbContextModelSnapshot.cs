@@ -7,10 +7,10 @@ using ProyectoPNT.Context;
 
 #nullable disable
 
-namespace ProyectoPNT.Migrations
+namespace ProjectoPNT.Migrations
 {
-    [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(AppDbContext))]
+    partial class AppDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
