@@ -56,4 +56,15 @@ public class Archivo3DService
         }   
         return estado;
     }
+    public List<Archivo3D> GetByUsuarioId(int usuarioId)
+    {
+        return context.Archivos3D.Where(a => a.UsuarioId == usuarioId).ToList();
+    }
+
+    public bool Delete(Archivo3D archivo)
+    {
+        context.Archivos3D.Remove(archivo);
+        context.SaveChanges();
+        return true;
+    }
 }

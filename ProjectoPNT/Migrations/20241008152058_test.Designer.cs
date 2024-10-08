@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProyectoPNT.Context;
 
@@ -11,9 +12,11 @@ using ProyectoPNT.Context;
 namespace ProjectoPNT.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241008152058_test")]
+    partial class test
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,10 +47,10 @@ namespace ProjectoPNT.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int?>("RepositorioArchivosBorradosId")
+                    b.Property<int?>("RepositorioArchivosId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("RepositorioArchivosId")
+                    b.Property<int?>("RepositorioArchivosId1")
                         .HasColumnType("int");
 
                     b.Property<string>("Ruta")
@@ -62,9 +65,9 @@ namespace ProjectoPNT.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("RepositorioArchivosBorradosId");
-
                     b.HasIndex("RepositorioArchivosId");
+
+                    b.HasIndex("RepositorioArchivosId1");
 
                     b.HasIndex("UsuarioId");
 
@@ -118,27 +121,19 @@ namespace ProjectoPNT.Migrations
 
             modelBuilder.Entity("ProyectoPNT.Entity.Archivo3D", b =>
                 {
-                    b.HasOne("ProyectoPNT.Entity.RepositorioArchivos", "RepositorioArchivosBorrados")
-                        .WithMany("ArchivosBorrados")
-                        .HasForeignKey("RepositorioArchivosBorradosId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.HasOne("ProyectoPNT.Entity.RepositorioArchivos", "RepositorioArchivos")
+                    b.HasOne("ProyectoPNT.Entity.RepositorioArchivos", null)
                         .WithMany("Archivos")
-                        .HasForeignKey("RepositorioArchivosId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .HasForeignKey("RepositorioArchivosId");
 
-                    b.HasOne("ProyectoPNT.Entity.Usuario", "Usuario")
+                    b.HasOne("ProyectoPNT.Entity.RepositorioArchivos", null)
+                        .WithMany("ArchivosBorrados")
+                        .HasForeignKey("RepositorioArchivosId1");
+
+                    b.HasOne("ProyectoPNT.Entity.Usuario", null)
                         .WithMany("Archivos3D")
                         .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("RepositorioArchivos");
-
-                    b.Navigation("RepositorioArchivosBorrados");
-
-                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("ProyectoPNT.Entity.RepositorioArchivos", b =>

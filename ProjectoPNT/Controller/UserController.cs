@@ -6,6 +6,7 @@ namespace ProyectoPNT.Controller;
 public class UserController
 {
     UserService userService = new UserService();
+    Archivo3DService archivo3DService = new Archivo3DService();
     
     public bool Registrarse(Usuario usuario)
     {
@@ -17,7 +18,20 @@ public class UserController
     }
     public bool DeleteById(int id)
     {
-        return userService.deleteById(id);
+        var usuario = userService.GetById(id);
+        if (usuario != null)
+        {
+            // Delete associated Archivo3D records
+            var archivos = archivo3DService.GetByUsuarioId(id);
+            foreach (var archivo in archivos)
+            {
+                archivo3DService.Delete(archivo);
+            }
+
+            // Delete the user
+            return userService.DeleteById(id);
+        }
+        return false;
     }
     public bool Update(Usuario usuario)
     {
@@ -34,4 +48,9 @@ public class UserController
     {
        return true;
     }
+    public List<Usuario> GetAllUsuarios()
+    {
+        return userService.GetAllUsuarios();
+    }
+    
 }

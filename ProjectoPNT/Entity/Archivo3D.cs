@@ -4,19 +4,27 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ProyectoPNT.Entity;
 
 public class Archivo3D
-{  
+{
     [Key]
     public int Id { get; set; }
     [MaxLength(50)]
-    public String Nombre { get; set;} 
+    public string Nombre { get; set; }
     [MaxLength(150)]
-    public String Descripcion { get; set; }
-    public String Formato { get; set; }
-    public Double Tamano { get; set; }
-    public String Ruta { get; set; }
-    //public DateTime FechaCreacion { get; set; }
-    //public Usuario Autor { get; set;  }
+    public string Descripcion { get; set; }
+    public string Formato { get; set; }
+    public double Tamano { get; set; }
+    public string Ruta { get; set; }
+
+    // FK para Usuario
     [ForeignKey("UsuarioId")]
     public int UsuarioId { get; set; }
-    
+    public Usuario Usuario { get; set; }
+
+    // FK para RepositorioArchivos
+    public int? RepositorioArchivosId { get; set; }
+    public RepositorioArchivos RepositorioArchivos { get; set; }
+
+    // FK para RepositorioArchivosBorrados
+    public int? RepositorioArchivosBorradosId { get; set; }
+    public RepositorioArchivos RepositorioArchivosBorrados { get; set; }
 }

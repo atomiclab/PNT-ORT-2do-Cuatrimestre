@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjectoPNT")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b26a65e6c32f93863294711c3865f0732fb96377")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bcc0365dc9fd3c405f6505c395a88094808e34fd")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjectoPNT")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjectoPNT")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

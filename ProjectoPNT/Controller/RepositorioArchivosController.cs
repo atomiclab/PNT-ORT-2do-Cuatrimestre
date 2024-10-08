@@ -1,8 +1,25 @@
+using ProjectoPNT.Service.implementation;
 using ProyectoPNT.Entity;
 
-namespace ProyectoPNT.Controller;
-
-public class RepositorioArchivosController
+namespace ProjectoPNT.Controller
 {
-    List<Archivo3D> archivos3D = new List<Archivo3D>();  
+    public class RepositorioArchivosController
+    {
+        private RepositorioArchivosService repositorioService = new RepositorioArchivosService();
+
+        public List<Archivo3D> BuscarArchivo(string nombre)
+        {
+            return repositorioService.BuscarArchivo(nombre);
+        }
+
+        public bool BorrarArchivoDeLista(int id)
+        {
+            return repositorioService.BorrarArchivoDeLista(id);
+        }
+
+        public List<Archivo3D> ListarArchivos(int usuarioId)
+        {
+            return repositorioService.ListarArchivos(usuarioId);
+        }
+    }
 }

@@ -42,6 +42,22 @@ public class UserService
         }   
         return estado;
     }  
+    public Usuario GetById(int id)
+    {
+        return context.Usuarios.FirstOrDefault(u => u.Id == id);
+    }
+
+    public bool DeleteById(int id)
+    {
+        var usuario = GetById(id);
+        if (usuario != null)
+        {
+            context.Usuarios.Remove(usuario);
+            context.SaveChanges();
+            return true;
+        }
+        return false;
+    }
         
         
     
@@ -55,6 +71,11 @@ public class UserService
             estado = true;
         }   
         return estado;
+    }
+    
+    public List<Usuario> GetAllUsuarios()
+    {
+        return context.Usuarios.ToList();
     }
     
 }
