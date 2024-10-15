@@ -1,0 +1,27 @@
+@model string 
+<!--
+//definicion de tipo de dato que estoy recibiendo por modelo en este caso es un string
+// con M mayuscula lo muestro
+-->
+@{ string saludo = "Hola Mundo"; }
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+
+<div>
+    <p> @saludo</p>
+    <p>asd @Model</p>
+    @ViewData["edad"] <!--//recibo cualquier dato desde el controlador, viejo-->
+    @ViewBag.edad <!--//recibo cualquier dato desde el controlador, nuevo-->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+@model IEnumerable<MVCProyectoPNT.Entity.Usuario>
+
+@{
+    ViewBag.Title = "User List";
+    Layout = "_Layout";
+}
+
+<h2>Lista de usuarios</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Email</th>
+        <th>Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.Id</td>
+            <td>@user.Nombre</td>
+            <td>@user.Apellido</td>
+            <td>@user.Email</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@user.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@user.Id">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@user.Id">Borrar</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<a asp-action="Create">Crear nuevo usuario</a>

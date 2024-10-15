@@ -7,6 +7,7 @@ public class Usuario
     [Key]
     public int Id { get; set; }
     //public int UsuarioID toma [KEY] como identity 
+    //Ponerle el nombre de prefijo y sufijoID
     
     //[Key, DatabaseGenerated(DatabaseGeneratedOption.None)] Hace que el campo no sea autoincrementable
     [MaxLength(50)]
