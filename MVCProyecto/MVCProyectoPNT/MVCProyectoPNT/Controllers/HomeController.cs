@@ -21,10 +21,16 @@ public class HomeController : Controller
         foreach (var archivo in archivos)
         {
             archivo.Usuario = archivo3DService.GetUsuarioById(archivo.UsuarioId);
+            archivo.RepositorioArchivos = archivo3DService.GetRepositorioArchivosById(archivo.RepositorioArchivosId);
         }
-        return View(archivos);
-    }
 
+        var repositoriosConArchivos = archivos
+            .GroupBy(a => a.RepositorioArchivos)
+            .Where(g => g.Any())
+            .ToList();
+
+        return View(repositoriosConArchivos);
+    }
     public IActionResult Privacy()
     {
         return View();

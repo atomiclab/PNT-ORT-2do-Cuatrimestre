@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MVCProyectoPNT")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28f1aaf002a99c8fec27a1964e60f17918d34d76")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8177c3cdbe7aa33f83e5d64ea65f21abff59900a")]
 [assembly: System.Reflection.AssemblyProductAttribute("MVCProyectoPNT")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MVCProyectoPNT")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
