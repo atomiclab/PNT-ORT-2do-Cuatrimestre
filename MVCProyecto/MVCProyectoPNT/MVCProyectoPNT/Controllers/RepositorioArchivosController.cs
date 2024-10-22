@@ -6,20 +6,80 @@ namespace MVCProyectoPNT.Controllers;
 
 public class RepositorioArchivosController : Controller
 {
-    private RepositorioArchivosService repositorioService = new RepositorioArchivosService();
+    private readonly RepositorioArchivosService repositorioService;
 
-    public List<Archivo3D> BuscarArchivo(string nombre)
+    public RepositorioArchivosController(RepositorioArchivosService repositorioService)
     {
-        return repositorioService.BuscarArchivo(nombre);
+        this.repositorioService = repositorioService;
     }
 
-    public bool BorrarArchivoDeLista(int id)
+    public IActionResult Index()
     {
-        return repositorioService.BorrarArchivoDeLista(id);
+        var repositorios = repositorioService.GetAll();
+        return View(repositorios);
     }
 
-    public List<Archivo3D> ListarArchivos(int usuarioId)
+    public IActionResult Create()
     {
-        return repositorioService.ListarArchivos(usuarioId);
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult Create(RepositorioArchivos repositorio)
+    {
+        if (ModelState.IsValid)
+        {
+            repositorioService.Create(repositorio);
+            return RedirectToAction(nameof(Index));
+        }
+        return View(repositorio);
+    }
+
+    public IActionResult Edit(int id)
+    {
+        var repositorio = repositorioService.GetById(id);
+        if (repositorio == null)
+        {
+            return NotFound();
+        }
+        return View(repositorio);
+    }
+
+    [HttpPost]
+    public IActionResult Edit(RepositorioArchivos repositorio)
+    {
+        if (ModelState.IsValid)
+        {
+            repositorioService.Update(repositorio);
+            return RedirectToAction(nameof(Index));
+        }
+        return View(repositorio);
+    }
+
+    public IActionResult Delete(int id)
+    {
+        var repositorio = repositorioService.GetById(id);
+        if (repositorio == null)
+        {
+            return NotFound();
+        }
+        return View(repositorio);
+    }
+
+    [HttpPost, ActionName("Delete")]
+    public IActionResult DeleteConfirmed(int id)
+    {
+        repositorioService.Delete(id);
+        return RedirectToAction(nameof(Index));
+    }
+
+    public IActionResult Details(int id)
+    {
+        var repositorio = repositorioService.GetById(id);
+        if (repositorio == null)
+        {
+            return NotFound();
+        }
+        return View(repositorio);
     }
 }

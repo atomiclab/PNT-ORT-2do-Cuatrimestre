@@ -5,6 +5,9 @@ namespace MVCProyectoPNT.Context;
 
 public class AppDbContext: DbContext
 {
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+    {
+    }
     public DbSet<Usuario> Usuarios { get; set; }
     public DbSet<Archivo3D> Archivos3D { get; set; }
     public DbSet<RepositorioArchivos> RepositorioArchivos { get; set; }

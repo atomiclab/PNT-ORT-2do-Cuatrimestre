@@ -16,6 +16,7 @@ public class Usuario
     
     [MaxLength(50)]
     [Required(ErrorMessage = "El apellido es obligatorio.")]
+    //TODO: validation attribute
     public String Apellido { get; set;}
 
 

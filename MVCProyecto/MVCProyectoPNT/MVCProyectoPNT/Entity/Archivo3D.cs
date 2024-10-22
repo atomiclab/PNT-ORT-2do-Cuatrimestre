@@ -21,10 +21,10 @@ public class Archivo3D
     public Usuario Usuario { get; set; }
 
     // FK para RepositorioArchivos
-    public int? RepositorioArchivosId { get; set; }
+    public int RepositorioArchivosId { get; set; }
     public RepositorioArchivos RepositorioArchivos { get; set; }
 
     // FK para RepositorioArchivosBorrados
     public int? RepositorioArchivosBorradosId { get; set; }
-    public RepositorioArchivos RepositorioArchivosBorrados { get; set; }
+    public RepositorioArchivos? RepositorioArchivosBorrados { get; set; }
 }

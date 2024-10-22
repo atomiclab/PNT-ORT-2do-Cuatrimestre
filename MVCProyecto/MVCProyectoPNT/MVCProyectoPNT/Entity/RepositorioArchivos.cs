@@ -6,6 +6,7 @@ public class RepositorioArchivos
 {
     [Key]
     public int Id { get; set; }
+    public string Nombre { get; set; }
 
     public ICollection<Archivo3D> Archivos { get; set; } = new List<Archivo3D>();
 

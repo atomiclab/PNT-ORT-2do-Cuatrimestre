@@ -1,0 +1,42 @@
+@model IEnumerable<MVCProyectoPNT.Entity.Archivo3D>
+
+@{
+ViewBag.Title = "Lista de Archivos 3D";
+Layout = "_Layout";
+}
+
+<h2>Lista de Archivos 3D</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Descripcion</th>
+        <th>Formato</th>
+        <th>Tamaño</th>
+        <th>Ruta</th>
+        <th>Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var archivo in Model)
+    {
+    <tr>
+        <td>@archivo.Id</td>
+        <td>@archivo.Nombre</td>
+        <td>@archivo.Descripcion</td>
+        <td>@archivo.Formato</td>
+        <td>@archivo.Tamano</td>
+        <td>@archivo.Ruta</td>
+        <td>
+            <a asp-action="Edit" asp-route-id="@archivo.Id">Editar</a> |
+            <a asp-action="Details" asp-route-id="@archivo.Id">Detalles</a> |
+            <a asp-action="Delete" asp-route-id="@archivo.Id">Borrar</a>
+        </td>
+    </tr>
+    }
+    </tbody>
+</table>
+
+<a asp-action="Create">Crear nuevo archivo</a>

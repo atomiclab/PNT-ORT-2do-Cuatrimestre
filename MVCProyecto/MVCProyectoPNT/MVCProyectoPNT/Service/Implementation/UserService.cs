@@ -5,7 +5,12 @@ namespace MVCProyectoPNT.Service.Implementation;
 
 public class UserService
 {
-    private AppDbContext context = new AppDbContext();
+    private readonly AppDbContext context;
+
+    public UserService(AppDbContext context)
+    {
+        this.context = context;
+    }
     public bool save(Usuario usuario)
     {
         bool estado = false;

@@ -1,0 +1,52 @@
+@model MVCProyectoPNT.Entity.Archivo3D
+
+@{
+    ViewBag.Title = "Borrar Archivo 3D";
+    Layout = "_Layout";
+}
+
+<h2>Borrar Archivo 3D</h2>
+
+<h3>¿Estás seguro que deseas borrar este archivo?</h3>
+<div>
+    <h4>Archivo 3D</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Formato)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Formato)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tamano)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tamano)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ruta)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ruta)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Borrar" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>

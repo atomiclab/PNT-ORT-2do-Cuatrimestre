@@ -5,28 +5,42 @@ namespace MVCProyectoPNT.Service.Implementation;
 
 public class RepositorioArchivosService
 {
-    
-    private AppDbContext context = new AppDbContext();
+    private readonly AppDbContext context;
 
-    public List<Archivo3D> BuscarArchivo(string nombre)
+    public RepositorioArchivosService(AppDbContext context)
     {
-        return context.Archivos3D.Where(a => a.Nombre.Contains(nombre)).ToList();
+        this.context = context;
     }
 
-    public bool BorrarArchivoDeLista(int id)
+    public List<RepositorioArchivos> GetAll()
     {
-        var archivo = context.Archivos3D.FirstOrDefault(a => a.Id == id);
-        if (archivo != null)
+        return context.RepositorioArchivos.ToList();
+    }
+
+    public RepositorioArchivos GetById(int id)
+    {
+        return context.RepositorioArchivos.FirstOrDefault(r => r.Id == id);
+    }
+
+    public void Create(RepositorioArchivos repositorio)
+    {
+        context.RepositorioArchivos.Add(repositorio);
+        context.SaveChanges();
+    }
+
+    public void Update(RepositorioArchivos repositorio)
+    {
+        context.RepositorioArchivos.Update(repositorio);
+        context.SaveChanges();
+    }
+
+    public void Delete(int id)
+    {
+        var repositorio = GetById(id);
+        if (repositorio != null)
         {
-            context.Archivos3D.Remove(archivo);
+            context.RepositorioArchivos.Remove(repositorio);
             context.SaveChanges();
-            return true;
         }
-        return false;
-    }
-
-    public List<Archivo3D> ListarArchivos(int usuarioId)
-    {
-        return context.Archivos3D.Where(a => a.UsuarioId == usuarioId).ToList();
     }
 }
