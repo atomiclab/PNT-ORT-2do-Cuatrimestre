@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.Identity.Client;
 using MVCProyectoPNT.Entity;
 using MVCProyectoPNT.Service.Implementation;
 using Microsoft.Extensions.Logging;
@@ -11,14 +10,15 @@ public class Archivo3DController : Controller
 {
     private readonly Archivo3DService archivo3DService;
     private readonly ILogger<Archivo3DController> logger;
+    private readonly IWebHostEnvironment hostingEnvironment;
 
-    public Archivo3DController(Archivo3DService archivo3DService, ILogger<Archivo3DController> logger)
+    public Archivo3DController(Archivo3DService archivo3DService, ILogger<Archivo3DController> logger, IWebHostEnvironment hostingEnvironment)
     {
         this.archivo3DService = archivo3DService;
         this.logger = logger;
+        this.hostingEnvironment = hostingEnvironment;
     }
 
-    // Métodos con la vista
     public IActionResult Index()
     {
         var archivos = archivo3DService.GetAll();
@@ -28,22 +28,47 @@ public class Archivo3DController : Controller
     public IActionResult Create()
     {
         logger.LogInformation("Entering Create GET method.");
-        var usuarios = archivo3DService.GetUsuarios(); 
-        ViewBag.Usuarios = new SelectList(usuarios, "Id", "Id"); 
+        var usuarios = archivo3DService.GetUsuarios();
+        ViewBag.Usuarios = new SelectList(usuarios, "Id", "Id");
         return View();
     }
 
     [HttpPost]
-    public IActionResult Create(Archivo3D archivo3D)
+    public async Task<IActionResult> Create(Archivo3D archivo3D, IFormFile Foto, IFormFile Documento)
     {
         logger.LogInformation("Entering Create POST method.");
         try
         {
+            var uploadsPath = Path.Combine(hostingEnvironment.WebRootPath, "uploads");
+            if (!Directory.Exists(uploadsPath))
+            {
+                Directory.CreateDirectory(uploadsPath);
+            }
+
+            if (Foto != null)
+            {
+                var fotoFileName = Path.GetFileName(Foto.FileName);
+                var fotoPath = Path.Combine(uploadsPath, fotoFileName);
+                using (var stream = new FileStream(fotoPath, FileMode.Create))
+                {
+                    await Foto.CopyToAsync(stream);
+                }
+                archivo3D.FotoRuta = Path.Combine("uploads", fotoFileName);
+            }
+
+            if (Documento != null)
+            {
+                var documentoFileName = Path.GetFileName(Documento.FileName);
+                var documentoPath = Path.Combine(uploadsPath, documentoFileName);
+                using (var stream = new FileStream(documentoPath, FileMode.Create))
+                {
+                    await Documento.CopyToAsync(stream);
+                }
+                archivo3D.DocumentoRuta = Path.Combine("uploads", documentoFileName);
+            }
+
             archivo3D.Usuario = archivo3DService.GetUsuarioById(archivo3D.UsuarioId);
-
-            archivo3D.RepositorioArchivos =
-                archivo3DService.GetRepositorioArchivosById(archivo3D.RepositorioArchivosId);
-
+            archivo3D.RepositorioArchivos = archivo3DService.GetRepositorioArchivosById(archivo3D.RepositorioArchivosId);
 
             logger.LogInformation("Model state is valid. Adding archivo3D to service.");
             archivo3DService.save(archivo3D);
@@ -54,9 +79,10 @@ public class Archivo3DController : Controller
         {
             logger.LogError(ex, "An error occurred while creating Archivo3D.");
             ModelState.AddModelError(string.Empty, "An error occurred while creating the archivo. Please try again.");
-        } 
+        }
         return View(archivo3D);
-}
+    }
+
     public IActionResult Edit(int id)
     {
         var archivo = archivo3DService.GetById(id);
@@ -64,7 +90,7 @@ public class Archivo3DController : Controller
         {
             return NotFound();
         }
-        return View((object)archivo); // Correcta forma de llamar al view para evitar ambigüedad
+        return View(archivo);
     }
 
     [HttpPost]
@@ -78,6 +104,8 @@ public class Archivo3DController : Controller
         return View(archivo3D);
     }
 
+    [HttpGet]
+    [Route("Archivo3D/Delete/{id}")]
     public IActionResult Delete(int id)
     {
         var archivo = archivo3DService.GetById(id);
@@ -88,13 +116,16 @@ public class Archivo3DController : Controller
         return View(archivo);
     }
 
+
     [HttpPost, ActionName("Delete")]
+    [Route("Archivo3D/DeleteConfirmed/{id}")]
     public IActionResult DeleteConfirmed(int id)
     {
         var archivo = archivo3DService.GetById(id);
         if (archivo != null)
         {
             archivo3DService.delete(archivo);
+            archivo3DService.SaveChanges();
         }
         return RedirectToAction(nameof(Index));
     }
@@ -108,7 +139,7 @@ public class Archivo3DController : Controller
             {
                 return NotFound();
             }
-            
+
             archivo.Usuario = archivo3DService.GetUsuarioById(archivo.UsuarioId);
 
             return View(archivo);
@@ -120,25 +151,32 @@ public class Archivo3DController : Controller
         }
     }
 
-    // Métodos antes de implementar la vista
     public bool Save(Archivo3D archivo3D)
     {
         return archivo3DService.save(archivo3D);
     }
 
-    public bool Delete(Archivo3D archivo3D)
+    public IActionResult Delete(Archivo3D archivo3D)
     {
-        return archivo3DService.delete(archivo3D);
+        archivo3DService.delete(archivo3D);
+        archivo3DService.SaveChanges();
+        return RedirectToAction(nameof(Index));
     }
 
     public bool DeleteById(int id)
     {
-        return archivo3DService.deleteById(id);
+        var archivo = archivo3DService.GetById(id);
+        if (archivo != null)
+        {
+            archivo3DService.delete(archivo);
+            archivo3DService.SaveChanges(); // Ensure changes are committed to the database
+            return true;
+        }
+        return false;
     }
 
     public bool Update(Archivo3D archivo3D)
     {
         return archivo3DService.update(archivo3D);
     }
-    
 }

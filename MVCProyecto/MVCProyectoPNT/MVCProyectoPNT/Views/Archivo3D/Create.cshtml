@@ -1,13 +1,13 @@
 @model MVCProyectoPNT.Entity.Archivo3D
 
 @{
-    ViewBag.Title = "Crear Archivo 3D";
-    Layout = "_Layout";
+ViewBag.Title = "Crear Archivo 3D";
+Layout = "_Layout";
 }
 
 <h2>Crear Archivo 3D</h2>
 
-<form asp-action="Create">
+<form asp-action="Create" enctype="multipart/form-data">
     <div class="form-group">
         <label asp-for="Nombre" class="control-label"></label>
         <input asp-for="Nombre" class="form-control" />
@@ -43,7 +43,18 @@
         <input asp-for="RepositorioArchivosId" class="form-control" />
         <span asp-validation-for="RepositorioArchivosId" class="text-danger"></span>
     </div>
-  
+
+    <div class="form-group">
+        <label for="Foto" class="control-label">Foto</label>
+        <input id="Foto" name="Foto" type="file" class="form-control" />
+        <span asp-validation-for="Foto" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="Documento" class="control-label">Documento</label>
+        <input id="Documento" name="Documento" type="file" class="form-control" />
+        <span asp-validation-for="Documento" class="text-danger"></span>
+    </div>
+
     <div class="form-group">
         <input type="submit" value="Crear" class="btn btn-primary" />
     </div>

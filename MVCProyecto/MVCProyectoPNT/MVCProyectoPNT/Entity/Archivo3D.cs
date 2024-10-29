@@ -27,4 +27,15 @@ public class Archivo3D
     // FK para RepositorioArchivosBorrados
     public int? RepositorioArchivosBorradosId { get; set; }
     public RepositorioArchivos? RepositorioArchivosBorrados { get; set; }
+   
+    //Posibilidad de subir una foto y un STL
+    public string FotoRuta { get; set; }
+    public string DocumentoRuta { get; set; }
+    
+    [NotMapped]
+    public IFormFile Foto { get; set; }
+
+    [NotMapped]
+    public IFormFile Documento { get; set; }
+    
 }

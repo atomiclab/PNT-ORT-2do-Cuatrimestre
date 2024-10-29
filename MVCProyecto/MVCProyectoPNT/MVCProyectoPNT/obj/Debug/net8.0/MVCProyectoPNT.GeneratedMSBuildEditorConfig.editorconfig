@@ -9,99 +9,99 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MVCProyectoPNT
 build_property.RootNamespace = MVCProyectoPNT
-build_property.ProjectDir = /Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/
+build_property.ProjectDir = /Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT
+build_property.MSBuildProjectDirectory = /Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/Archivo3D/Create.cshtml]
+[/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/Archivo3D/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXJjaGl2bzNEL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/Archivo3D/Delete.cshtml]
+[/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/Archivo3D/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXJjaGl2bzNEL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/Archivo3D/Details.cshtml]
+[/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/Archivo3D/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXJjaGl2bzNEL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/Archivo3D/Edit.cshtml]
+[/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/Archivo3D/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXJjaGl2bzNEL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/Archivo3D/Index.cshtml]
+[/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/Archivo3D/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXJjaGl2bzNEL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/Home/Index.cshtml]
+[/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/Home/Privacy.cshtml]
+[/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/RepositorioArchivos/Create.cshtml]
+[/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/RepositorioArchivos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVwb3NpdG9yaW9BcmNoaXZvcy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/RepositorioArchivos/Delete.cshtml]
+[/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/RepositorioArchivos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVwb3NpdG9yaW9BcmNoaXZvcy9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/RepositorioArchivos/Details.cshtml]
+[/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/RepositorioArchivos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVwb3NpdG9yaW9BcmNoaXZvcy9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/RepositorioArchivos/Edit.cshtml]
+[/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/RepositorioArchivos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVwb3NpdG9yaW9BcmNoaXZvcy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/RepositorioArchivos/Index.cshtml]
+[/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/RepositorioArchivos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVwb3NpdG9yaW9BcmNoaXZvcy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/Shared/Error.cshtml]
+[/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/User/Create.cshtml]
+[/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/User/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/User/Delete.cshtml]
+[/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/User/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/User/Details.cshtml]
+[/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/User/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/User/Edit.cshtml]
+[/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/User/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/User/Index.cshtml]
+[/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/_ViewImports.cshtml]
+[/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/_ViewStart.cshtml]
+[/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/Shared/_Layout.cshtml]
+[/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-a0jnn1olce

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/MVCProyectoPNT.csproj": {}
+    "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/MVCProyectoPNT.csproj": {}
   },
   "projects": {
-    "/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/MVCProyectoPNT.csproj": {
+    "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/MVCProyectoPNT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/MVCProyectoPNT.csproj",
+        "projectUniqueName": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/MVCProyectoPNT.csproj",
         "projectName": "MVCProyectoPNT",
-        "projectPath": "/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/MVCProyectoPNT.csproj",
+        "projectPath": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/MVCProyectoPNT.csproj",
         "packagesPath": "/Users/ginotubaro/.nuget/packages/",
-        "outputPath": "/Users/ginotubaro/Desktop/Analista de sistemas ORT/PNT2024/ProyectoPNT/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/obj/",
+        "outputPath": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ginotubaro/.nuget/NuGet/NuGet.Config"
@@ -33,6 +33,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {

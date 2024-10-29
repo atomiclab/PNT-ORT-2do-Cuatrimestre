@@ -43,7 +43,10 @@ public class Archivo3DService
         }
         return estado;
     }
-    
+    public void SaveChanges()
+    {
+        context.SaveChanges();
+    }
     public bool update(Archivo3D archivo3d)
     {
         bool estado = false;
