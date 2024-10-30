@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zHWe1OnJDPCNHcO82a5KXEeYnuvXQorjho5cneA2YGo=",
+  "Hash": "zUH4kfuBctkTCs+gUO2+RHdbTQ8Gof5O6xNXEN2NY6A=",
   "Source": "MVCProyectoPNT",
   "BasePath": "_content/MVCProyectoPNT",
   "Mode": "Default",
@@ -1195,6 +1195,25 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
     },
     {
+      "Identity": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/uploads/02.jpg",
+      "SourceId": "MVCProyectoPNT",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/",
+      "BasePath": "_content/MVCProyectoPNT",
+      "RelativePath": "uploads/02.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/02.jpg"
+    },
+    {
       "Identity": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/uploads/bolt_25x8.stl",
       "SourceId": "MVCProyectoPNT",
       "SourceType": "Discovered",
@@ -1271,6 +1290,44 @@
       "OriginalItemSpec": "wwwroot/uploads/img2.png"
     },
     {
+      "Identity": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/uploads/screw.stl",
+      "SourceId": "MVCProyectoPNT",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/",
+      "BasePath": "_content/MVCProyectoPNT",
+      "RelativePath": "uploads/screw.stl",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/screw.stl"
+    },
+    {
+      "Identity": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/uploads/Solid.stl",
+      "SourceId": "MVCProyectoPNT",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/",
+      "BasePath": "_content/MVCProyectoPNT",
+      "RelativePath": "uploads/Solid.stl",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/Solid.stl"
+    },
+    {
       "Identity": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/uploads/washer_1_x_8.5.png",
       "SourceId": "MVCProyectoPNT",
       "SourceType": "Discovered",
@@ -1307,6 +1364,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/uploads/washer_1_x_8.5.stl"
+    },
+    {
+      "Identity": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/uploads/WhatsApp_Bild_2024-10-04_um_17.06.30_00cd6488.jpg",
+      "SourceId": "MVCProyectoPNT",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/",
+      "BasePath": "_content/MVCProyectoPNT",
+      "RelativePath": "uploads/WhatsApp_Bild_2024-10-04_um_17.06.30_00cd6488.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/WhatsApp_Bild_2024-10-04_um_17.06.30_00cd6488.jpg"
     }
   ]
 }

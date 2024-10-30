@@ -3,42 +3,116 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>@ViewData["Title"] - MVCProyectoPNT</title>
+    <title>@ViewData["Title"] - Repo3D</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/MVCProyectoPNT.styles.css" asp-append-version="true"/>
+    <style>
+        .navbar-custom {
+            background-color: #0066ff !important;
+        }
+        .search-input {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+        }
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .search-input:focus {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: white;
+            box-shadow: none;
+        }
+      
+    </style>
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
         <div class="container-fluid">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MVCProyectoPNT</a>
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Repo3D</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            
+            
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="usuarioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Usuarios
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="usuarioDropdown">
+                            <li>
+                                <a class="dropdown-item" asp-controller="User" asp-action="Index">Ver Usuarios</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" asp-controller="User" asp-action="Create">Crear Usuario</a>
+                            </li>
+                        </ul>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="archivoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Archivos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="archivoDropdown">
+                            <li>
+                                <a class="dropdown-item" asp-controller="Archivo3D" asp-action="Create">Crear Archivo</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" asp-controller="Archivo3D" asp-action="Index">Ver Archivos</a>
+                            </li>
+                         
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="repositorioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Repositorios
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="repositorioDropdown">
+                            <li>
+                                <a class="dropdown-item" asp-controller="RepositorioArchivos" asp-action="Create">Crear Repositorio</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" asp-controller="RepositorioArchivos" asp-action="Index">Ver Repositorios</a>
+                            </li>
+                           
+                        </ul>
+                    </li>
+
                 </ul>
             </div>
+
+            <form asp-controller="Home" asp-action="Search" method="get" class="d-flex mx-lg-4 flex-grow-1 max-width-md">
+                <div class="input-group">
+                    <input class="form-control search-input" type="search" name="query" placeholder="Buscar en Repo3D">
+                    <span class="input-group-text bg-transparent border-0 text-white">
+            <i class="bi bi-search"></i>
+        </span>
+                </div>
+            </form>
+            
         </div>
     </nav>
 </header>
 <div class="container">
     <main role="main" class="pb-3">
+        
         @RenderBody()
     </main>
 </div>
 
 <footer class="border-top footer text-muted">
     <div class="container">
-        &copy; 2024 - MVCProyectoPNT - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        &copy; 2024 - Repo3D - App diseñada para PNT1 ORT 
     </div>
 </footer>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>

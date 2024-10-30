@@ -124,4 +124,14 @@ public class Archivo3DService
     {
         return context.RepositorioArchivos.FirstOrDefault(r => r.Id == repositorioArchivosId);
     }
+    public List<RepositorioArchivos> GetAllRepositorios()
+    {
+        return context.RepositorioArchivos.ToList();
+    }
+    public List<Archivo3D> SearchByName(string name)
+    {
+        return context.Archivos3D
+            .Where(a => a.Nombre.Contains(name))
+            .ToList();
+    }
 }

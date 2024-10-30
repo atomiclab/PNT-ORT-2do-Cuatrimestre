@@ -5,8 +5,34 @@ ViewBag.Title = "Detalles del Archivo 3D";
 Layout = "_Layout";
 }
 
-<h2>Detalles del Archivo 3D</h2>
+<!--<h2 style="margin-top: 20px">@Model.Nombre</h2>-->
 
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-header d-flex align-items-center">
+            <img src="https://placehold.co/40x40/" alt="avatar" class="rounded-circle me-2" width="40" height="40">
+            <div>
+                <h6 class="mb-0">@Model.Nombre</h6>
+                <small class="text-muted">@Model.Usuario.Nombre || @Model.Usuario.Email</small>
+            </div>
+        </div>
+        <img src="~/@Model.FotoRuta" class="card-img-top" alt="@Model.Nombre">
+        <div class="card-body">
+            <div class="d-flex justify-content-between">
+                <a href="~/@Model.DocumentoRuta" download>
+                    <button class="btn btn-primary">Descargar Documento</button>
+                </a>
+                <div>
+                    <a asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
+                    <a asp-action="Index">Volver a la lista</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--
 <div>
     <h4>Archivo3D</h4>
     <hr />
@@ -58,4 +84,4 @@ Layout = "_Layout";
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
     <a asp-action="Index">Volver a la lista</a>
-</div>
+</div>-->

@@ -40,10 +40,9 @@ Layout = "_Layout";
     </div>
     <div class="form-group">
         <label asp-for="RepositorioArchivosId" class="control-label"></label>
-        <input asp-for="RepositorioArchivosId" class="form-control" />
+        <select asp-for="RepositorioArchivosId" class="form-control" asp-items="ViewBag.Repositorios"></select>
         <span asp-validation-for="RepositorioArchivosId" class="text-danger"></span>
     </div>
-
     <div class="form-group">
         <label for="Foto" class="control-label">Foto</label>
         <input id="Foto" name="Foto" type="file" class="form-control" />
@@ -54,7 +53,6 @@ Layout = "_Layout";
         <input id="Documento" name="Documento" type="file" class="form-control" />
         <span asp-validation-for="Documento" class="text-danger"></span>
     </div>
-
     <div class="form-group">
         <input type="submit" value="Crear" class="btn btn-primary" />
     </div>

@@ -41,4 +41,22 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+    
+    [HttpGet]
+    public IActionResult Search(string query)
+    {
+        var archivos = archivo3DService.SearchByName(query);
+        foreach (var archivo in archivos)
+        {
+            archivo.Usuario = archivo3DService.GetUsuarioById(archivo.UsuarioId);
+            archivo.RepositorioArchivos = archivo3DService.GetRepositorioArchivosById(archivo.RepositorioArchivosId);
+        }
+
+        var repositoriosConArchivos = archivos
+            .GroupBy(a => a.RepositorioArchivos)
+            .Where(g => g.Any())
+            .ToList();
+
+        return View("Index", repositoriosConArchivos);
+    }
 }

@@ -29,7 +29,11 @@ public class Archivo3DController : Controller
     {
         logger.LogInformation("Entering Create GET method.");
         var usuarios = archivo3DService.GetUsuarios();
+        var repositorios = archivo3DService.GetAllRepositorios()
+            .OrderBy(r => r.Nombre)
+            .ToList();
         ViewBag.Usuarios = new SelectList(usuarios, "Id", "Id");
+        ViewBag.Repositorios = new SelectList(repositorios, "Id", "Nombre");
         return View();
     }
 
@@ -39,6 +43,19 @@ public class Archivo3DController : Controller
         logger.LogInformation("Entering Create POST method.");
         try
         {
+            //STL u OBJ solamente
+            var allowedExtensions = new[] { ".stl", ".obj" };
+
+            if (Documento != null)
+            {
+                var extension = Path.GetExtension(Documento.FileName).ToLower();
+                if (!allowedExtensions.Contains(extension))
+                {
+                    ModelState.AddModelError("Documento", "Solo se permiten archivos STL o OBJ.");
+                    return View(archivo3D);
+                }
+            }
+            
             var uploadsPath = Path.Combine(hostingEnvironment.WebRootPath, "uploads");
             if (!Directory.Exists(uploadsPath))
             {
@@ -178,5 +195,12 @@ public class Archivo3DController : Controller
     public bool Update(Archivo3D archivo3D)
     {
         return archivo3DService.update(archivo3D);
+    }
+    
+    [HttpGet]
+    public IActionResult Search(string query)
+    {
+        var archivos = archivo3DService.SearchByName(query);
+        return View("Index", archivos);
     }
 }

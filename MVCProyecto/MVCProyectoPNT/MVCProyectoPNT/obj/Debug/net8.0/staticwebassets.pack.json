@@ -245,6 +245,18 @@
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
+      "Id": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/uploads/02.jpg",
+      "PackagePath": "staticwebassets/uploads/02.jpg"
+    },
+    {
+      "Id": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/uploads/Solid.stl",
+      "PackagePath": "staticwebassets/uploads/Solid.stl"
+    },
+    {
+      "Id": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/uploads/WhatsApp_Bild_2024-10-04_um_17.06.30_00cd6488.jpg",
+      "PackagePath": "staticwebassets/uploads/WhatsApp_Bild_2024-10-04_um_17.06.30_00cd6488.jpg"
+    },
+    {
       "Id": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/uploads/bolt_25x8.stl",
       "PackagePath": "staticwebassets/uploads/bolt_25x8.stl"
     },
@@ -259,6 +271,10 @@
     {
       "Id": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/uploads/img2.png",
       "PackagePath": "staticwebassets/uploads/img2.png"
+    },
+    {
+      "Id": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/uploads/screw.stl",
+      "PackagePath": "staticwebassets/uploads/screw.stl"
     },
     {
       "Id": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/uploads/washer_1_x_8.5.png",
