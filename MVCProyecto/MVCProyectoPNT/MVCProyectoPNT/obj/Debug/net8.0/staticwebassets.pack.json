@@ -249,6 +249,22 @@
       "PackagePath": "staticwebassets/uploads/02.jpg"
     },
     {
+      "Id": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/uploads/IMG_20241005_141315193_copy.jpg",
+      "PackagePath": "staticwebassets/uploads/IMG_20241005_141315193_copy.jpg"
+    },
+    {
+      "Id": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/uploads/Screenshot_2024-09-30_164808.png",
+      "PackagePath": "staticwebassets/uploads/Screenshot_2024-09-30_164808.png"
+    },
+    {
+      "Id": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/uploads/Screenshot_6-10-2024_142849_makerworld.com.jpeg",
+      "PackagePath": "staticwebassets/uploads/Screenshot_6-10-2024_142849_makerworld.com.jpeg"
+    },
+    {
+      "Id": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/uploads/Shark_single_color.stl",
+      "PackagePath": "staticwebassets/uploads/Shark_single_color.stl"
+    },
+    {
       "Id": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/uploads/Solid.stl",
       "PackagePath": "staticwebassets/uploads/Solid.stl"
     },
@@ -271,6 +287,10 @@
     {
       "Id": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/uploads/img2.png",
       "PackagePath": "staticwebassets/uploads/img2.png"
+    },
+    {
+      "Id": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/uploads/obj_1_tealightcauldron.step.stl",
+      "PackagePath": "staticwebassets/uploads/obj_1_tealightcauldron.step.stl"
     },
     {
       "Id": "/Users/ginotubaro/Desktop/ORT - Analista de sistemas/PNT2024/PI Limpio/PNT-ORT-2do-Cuatrimestre/MVCProyecto/MVCProyectoPNT/MVCProyectoPNT/wwwroot/uploads/screw.stl",

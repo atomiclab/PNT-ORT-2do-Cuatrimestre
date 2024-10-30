@@ -28,11 +28,13 @@ public class Archivo3DController : Controller
     public IActionResult Create()
     {
         logger.LogInformation("Entering Create GET method.");
-        var usuarios = archivo3DService.GetUsuarios();
+        var usuarios = archivo3DService.GetUsuarios()
+            .Select(u => new { u.Id, u.Email })
+            .ToList();
         var repositorios = archivo3DService.GetAllRepositorios()
             .OrderBy(r => r.Nombre)
             .ToList();
-        ViewBag.Usuarios = new SelectList(usuarios, "Id", "Id");
+        ViewBag.Usuarios = new SelectList(usuarios, "Id", "Email");
         ViewBag.Repositorios = new SelectList(repositorios, "Id", "Nombre");
         return View();
     }
