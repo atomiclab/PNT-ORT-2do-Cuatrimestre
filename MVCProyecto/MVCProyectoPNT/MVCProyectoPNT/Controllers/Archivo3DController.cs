@@ -43,7 +43,7 @@ public class Archivo3DController : Controller
         logger.LogInformation("Entering Create POST method.");
         try
         {
-            //STL u OBJ solamente
+            // STL u OBJ solamente
             var allowedExtensions = new[] { ".stl", ".obj" };
 
             if (Documento != null)
@@ -55,7 +55,7 @@ public class Archivo3DController : Controller
                     return View(archivo3D);
                 }
             }
-            
+
             var uploadsPath = Path.Combine(hostingEnvironment.WebRootPath, "uploads");
             if (!Directory.Exists(uploadsPath))
             {
@@ -100,6 +100,7 @@ public class Archivo3DController : Controller
         return View(archivo3D);
     }
 
+    [HttpGet]
     public IActionResult Edit(int id)
     {
         var archivo = archivo3DService.GetById(id);
@@ -111,14 +112,52 @@ public class Archivo3DController : Controller
     }
 
     [HttpPost]
-    public IActionResult Edit(Archivo3D archivo3D)
+    public async Task<IActionResult> Edit(int id, Archivo3D updatedArchivo, IFormFile Foto, IFormFile Documento)
     {
-        if (ModelState.IsValid)
+        var archivo = archivo3DService.GetById(id);
+        if (archivo == null)
         {
-            archivo3DService.update(archivo3D);
-            return RedirectToAction(nameof(Index));
+            return NotFound();
         }
-        return View(archivo3D);
+
+        
+            var uploadsPath = Path.Combine(hostingEnvironment.WebRootPath, "uploads");
+            if (!Directory.Exists(uploadsPath))
+            {
+                Directory.CreateDirectory(uploadsPath);
+            }
+
+            if (Foto != null)
+            {
+                var fotoFileName = Path.GetFileName(Foto.FileName);
+                var fotoPath = Path.Combine(uploadsPath, fotoFileName);
+                using (var stream = new FileStream(fotoPath, FileMode.Create))
+                {
+                    await Foto.CopyToAsync(stream);
+                }
+                archivo.FotoRuta = Path.Combine("uploads", fotoFileName);
+            }
+
+            if (Documento != null)
+            {
+                var documentoFileName = Path.GetFileName(Documento.FileName);
+                var documentoPath = Path.Combine(uploadsPath, documentoFileName);
+                using (var stream = new FileStream(documentoPath, FileMode.Create))
+                {
+                    await Documento.CopyToAsync(stream);
+                }
+                archivo.DocumentoRuta = Path.Combine("uploads", documentoFileName);
+            }
+
+            archivo.Nombre = updatedArchivo.Nombre;
+            archivo.Descripcion = updatedArchivo.Descripcion;
+            archivo.Formato = updatedArchivo.Formato;
+            archivo.Tamano = updatedArchivo.Tamano;
+            archivo.Ruta = updatedArchivo.Ruta;
+
+            archivo3DService.update(archivo);
+            return RedirectToAction(nameof(Index));
+        
     }
 
     [HttpGet]
@@ -132,7 +171,6 @@ public class Archivo3DController : Controller
         }
         return View(archivo);
     }
-
 
     [HttpPost, ActionName("Delete")]
     [Route("Archivo3D/DeleteConfirmed/{id}")]
@@ -196,7 +234,7 @@ public class Archivo3DController : Controller
     {
         return archivo3DService.update(archivo3D);
     }
-    
+
     [HttpGet]
     public IActionResult Search(string query)
     {
