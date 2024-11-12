@@ -43,4 +43,8 @@ public class RepositorioArchivosService
             context.SaveChanges();
         }
     }
+    public bool ExistsByName(string nombre)
+    {
+        return context.RepositorioArchivos.Any(r => r.Nombre == nombre);
+    }
 }

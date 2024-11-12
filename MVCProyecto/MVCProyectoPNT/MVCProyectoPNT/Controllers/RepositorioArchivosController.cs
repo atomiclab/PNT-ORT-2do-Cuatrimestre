@@ -23,13 +23,16 @@ public class RepositorioArchivosController : Controller
     {
         return View();
     }
-//TODO: Evitar que se repitan por los nombres 
     [HttpPost]
     public IActionResult Create(RepositorioArchivos repositorio)
     {
+        if (repositorioService.ExistsByName(repositorio.Nombre))
+        {
+            ModelState.AddModelError("Nombre", "El repositorio ya existe.");
+        }
+
         if (ModelState.IsValid)
         {
-            //Preguntar si el nombre que viene ya existe y permitir publicar o no 
             repositorioService.Create(repositorio);
             return RedirectToAction(nameof(Index));
         }
