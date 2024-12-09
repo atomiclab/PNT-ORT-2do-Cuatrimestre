@@ -26,12 +26,12 @@ public class RepositorioArchivosController : Controller
     [HttpPost]
     public IActionResult Create(RepositorioArchivos repositorio)
     {
-        if (repositorioService.ExistsByName(repositorio.Nombre))
+        if (repositorioService.ExistsByName(repositorio.Nombre)) //verifica si ya existe un repositorio con el mismo nombre 
         {
-            ModelState.AddModelError("Nombre", "El repositorio ya existe.");
+            ModelState.AddModelError("Nombre", "El repositorio ya existe."); //agrega un error al modelo
         }
 
-        if (ModelState.IsValid)
+        if (ModelState.IsValid) //verifica si el modelo es valido
         {
             repositorioService.Create(repositorio);
             return RedirectToAction(nameof(Index));

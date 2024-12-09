@@ -20,7 +20,8 @@ public class Archivo3DService
         try
         {
             if (archivo3D != null)
-            {
+            {   
+                // Registro de información en el log que llega
                 logger.LogInformation("Creating Archivo3D with the following data:");
                 logger.LogInformation($"Id: {archivo3D.Id}");
                 logger.LogInformation($"Nombre: {archivo3D.Nombre}");
@@ -91,9 +92,9 @@ public class Archivo3DService
         }   
         return estado;
     }
-    public List<Archivo3D> GetByUsuarioId(int usuarioId)
+    public List<Archivo3D> GetByUsuarioId(int usuarioId) //obtiene los archivos de un usuario
     {
-        return context.Archivos3D.Where(a => a.UsuarioId == usuarioId).ToList();
+        return context.Archivos3D.Where(a => a.UsuarioId == usuarioId).ToList(); // Where: Filtra una secuencia de valores basada en archivo
     }
 
     public bool Delete(Archivo3D archivo)

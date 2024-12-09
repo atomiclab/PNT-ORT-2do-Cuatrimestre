@@ -6,11 +6,14 @@ using Microsoft.Extensions.Logging;
 
 namespace MVCProyectoPNT.Controllers;
 
+/// Controlador para gestionar operaciones CRUD relacionadas con la entidad Archivo3D.
+
 public class Archivo3DController : Controller
 {
     private readonly Archivo3DService archivo3DService;
     private readonly ILogger<Archivo3DController> logger;
     private readonly IWebHostEnvironment hostingEnvironment;
+    /// Constructor para inicializar dependencias del controlador.
 
     public Archivo3DController(Archivo3DService archivo3DService, ILogger<Archivo3DController> logger, IWebHostEnvironment hostingEnvironment)
     {
@@ -18,13 +21,16 @@ public class Archivo3DController : Controller
         this.logger = logger;
         this.hostingEnvironment = hostingEnvironment;
     }
+    /// Acción para mostrar una lista de todos los archivos 3D disponibles.
+    /// <returns>Vista con la lista de archivos 3D.</returns>
 
     public IActionResult Index()
     {
         var archivos = archivo3DService.GetAll();
         return View(archivos);
     }
-
+    /// Acción para mostrar el formulario de creación de un nuevo archivo 3D.
+    /// <returns>Vista para crear un nuevo archivo 3D.</returns>
     public IActionResult Create()
     {
         logger.LogInformation("Entering Create GET method.");
@@ -38,6 +44,8 @@ public class Archivo3DController : Controller
         ViewBag.Repositorios = new SelectList(repositorios, "Id", "Nombre");
         return View();
     }
+    /// Acción para manejar la creación de un nuevo archivo 3D a través de un formulario.
+    /// <returns>Redirecciona a Index o muestra la vista de error.</returns>
 
     [HttpPost]
     public async Task<IActionResult> Create(Archivo3D archivo3D, IFormFile Foto, IFormFile Documento)
@@ -46,6 +54,7 @@ public class Archivo3DController : Controller
         try
         {
             // STL u OBJ solamente
+            // Validar extensiones permitidas para el archivo 3D
             var allowedExtensions = new[] { ".stl", ".obj" };
 
             if (Documento != null)
@@ -57,13 +66,13 @@ public class Archivo3DController : Controller
                     return View(archivo3D);
                 }
             }
-
+            // Configurar rutas de subida de archivos
             var uploadsPath = Path.Combine(hostingEnvironment.WebRootPath, "uploads");
             if (!Directory.Exists(uploadsPath))
             {
                 Directory.CreateDirectory(uploadsPath);
             }
-
+            // Guardar la imagen si existe
             if (Foto != null)
             {
                 var fotoFileName = Path.GetFileName(Foto.FileName);
@@ -74,7 +83,7 @@ public class Archivo3DController : Controller
                 }
                 archivo3D.FotoRuta = Path.Combine("uploads", fotoFileName);
             }
-
+            // Guardar el documento si existe
             if (Documento != null)
             {
                 var documentoFileName = Path.GetFileName(Documento.FileName);
@@ -101,6 +110,8 @@ public class Archivo3DController : Controller
         }
         return View(archivo3D);
     }
+    /// Acción para mostrar el formulario de edición de un archivo 3D existente.
+    /// <returns>Vista para editar un archivo 3D.</returns>
 
     [HttpGet]
     public IActionResult Edit(int id)
@@ -112,6 +123,8 @@ public class Archivo3DController : Controller
         }
         return View(archivo);
     }
+    /// Acción para manejar la edición de un archivo 3D existente.
+    /// <returns>Redirecciona a Index o muestra la vista de error.</returns>
 
     [HttpPost]
     public async Task<IActionResult> Edit(int id, Archivo3D updatedArchivo, IFormFile Foto, IFormFile Documento)
@@ -121,13 +134,13 @@ public class Archivo3DController : Controller
         {
             return NotFound();
         }
-
-        
+        // Configuración de rutas y guardado similar a Create
             var uploadsPath = Path.Combine(hostingEnvironment.WebRootPath, "uploads");
             if (!Directory.Exists(uploadsPath))
             {
                 Directory.CreateDirectory(uploadsPath);
             }
+            // Guardar la imagen si existe
 
             if (Foto != null)
             {
@@ -139,6 +152,7 @@ public class Archivo3DController : Controller
                 }
                 archivo.FotoRuta = Path.Combine("uploads", fotoFileName);
             }
+            // Guardar el documento si existe
 
             if (Documento != null)
             {
@@ -150,6 +164,7 @@ public class Archivo3DController : Controller
                 }
                 archivo.DocumentoRuta = Path.Combine("uploads", documentoFileName);
             }
+            // Actualizar propiedades del archivo
 
             archivo.Nombre = updatedArchivo.Nombre;
             archivo.Descripcion = updatedArchivo.Descripcion;
@@ -161,6 +176,8 @@ public class Archivo3DController : Controller
             return RedirectToAction(nameof(Index));
         
     }
+    /// Acción para mostrar la vista de confirmación de eliminación de un archivo 3D.
+    /// <returns>Vista de confirmación de eliminación.</returns>
 
     [HttpGet]
     [Route("Archivo3D/Delete/{id}")]
@@ -173,6 +190,8 @@ public class Archivo3DController : Controller
         }
         return View(archivo);
     }
+    /// Acción para eliminar un archivo 3D confirmado.
+    /// <returns>Redirecciona a Index.</returns>
 
     [HttpPost, ActionName("Delete")]
     [Route("Archivo3D/DeleteConfirmed/{id}")]
@@ -186,6 +205,8 @@ public class Archivo3DController : Controller
         }
         return RedirectToAction(nameof(Index));
     }
+    /// Acción para mostrar los detalles de un archivo 3D específico.
+    /// <returns>Vista con los detalles del archivo.</returns>
 
     public IActionResult Details(int id)
     {
@@ -226,7 +247,7 @@ public class Archivo3DController : Controller
         if (archivo != null)
         {
             archivo3DService.delete(archivo);
-            archivo3DService.SaveChanges(); // Ensure changes are committed to the database
+            archivo3DService.SaveChanges(); // Guardar cambios
             return true;
         }
         return false;

@@ -77,8 +77,8 @@ public class UserService
         return estado;
     }
     
-    public List<Usuario> GetAllUsuarios()
+    public List<Usuario> GetAllUsuarios() //obtiene todos los usuarios
     {
-        return context.Usuarios.ToList();
+        return context.Usuarios.ToList(); //ToList convierte la consulta en una lista
     }
 }

@@ -16,6 +16,7 @@ public class UserController : Controller
         this.archivo3DService = archivo3DService;
         this.logger = logger;
     }
+    // Acción para mostrar la lista de usuarios
     public IActionResult Index()
     {
         var usuarios = userService.GetAllUsuarios();
@@ -74,7 +75,7 @@ public class UserController : Controller
    [HttpPost]
 public IActionResult Edit(Usuario usuario)
 {
-    // Remove the Password field from model state validation
+    // No validar la contraseña si no se proporciona
     ModelState.Remove("Password");
 
     if (ModelState.IsValid)
